@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Game</title>
+	</head>
+	<body>
+
+		<button class="btn">Click</button>
+	
+	</body>
+
+<script type="text/javascript">
+
+let counter = 0;
+
+var buttons = document.getElementsByClassName('btn');
+if(buttons.length>0){
+
+for (var i=0;i<buttons.length;i++){
+	buttons[i].addEventListener('click',()=>{
+			++counter;
+		});
+    }
+
+	
+	setTimeout(()=>{
+		if(counter>5){
+			alert('You win! Your score is: '+counter);
+		}else{
+			alert('Sorry, you lost.');
+		}
+
+	},2000);
+
+}
+
+
+</script>
+
+
+	</html>	
