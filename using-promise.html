@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Game</title>
+	</head>
+	<body>
+
+		<button class="btn">Click</button>
+	
+	</body>
+
+<script type="text/javascript">
+function startGame(){	
+
+let counter = 0;
+	var buttons = document.getElementsByClassName('btn');
+	if(buttons.length>0){
+
+		for (var i=0;i<buttons.length;i++){
+			buttons[i].addEventListener('click',()=>{
+				++counter;
+			});
+		}
+
+		return new Promise((resolve,reject)=>{
+			setTimeout(()=>{
+				console.log(counter);
+				if(counter > 0){
+					if(){
+
+					}
+					resolve(counter);
+				} else{
+					reject();
+				}
+			},2000);
+		});  
+	}
+}
+
+startGame().then((counter)=>{
+	alert('You won! Your score is: '+counter);
+}).catch((err)=>{
+	console.log(err);
+	alert('Sorry, you lost.');
+});
+
+
+</script>
+
+
+	</html>	
